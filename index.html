@@ -9,6 +9,11 @@
 
     <!-- CSS styles -->
     <link rel="stylesheet" href="css\style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
 
     <!-- Google Fonts -->
     <link
@@ -21,12 +26,6 @@
       src="https://kit.fontawesome.com/d8d0e88669.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- jCuery library-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- JS file -->
-    <script src="js\app.js"></script>
 
     <title>MoGo</title>
   </head>
@@ -299,7 +298,7 @@
             </div>
             <div class="wedo__item">
               <div class="accordion">
-                <div class="accordion__item">
+                <div class="accordion__item" data-collapse="#wedo_1">
                   <div class="accordion__header">
                     <img
                       class="accordion__icon"
@@ -308,7 +307,7 @@
                     />
                     <div class="accordion__title">Photography</div>
                   </div>
-                  <div class="accordion__content">
+                  <div class="accordion__content" id="wedo_1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -320,7 +319,7 @@
                   </div>
                 </div>
 
-                <div class="accordion__item active">
+                <div class="accordion__item active" data-collapse="#wedo_2">
                   <div class="accordion__header">
                     <img
                       class="accordion__icon"
@@ -329,7 +328,7 @@
                     />
                     <div class="accordion__title">Creativity</div>
                   </div>
-                  <div class="accordion__content">
+                  <div class="accordion__content" id="wedo_2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -341,7 +340,7 @@
                   </div>
                 </div>
 
-                <div class="accordion__item">
+                <div class="accordion__item" data-collapse="#wedo_3">
                   <div class="accordion__header">
                     <img
                       class="accordion__icon"
@@ -350,7 +349,7 @@
                     />
                     <div class="accordion__title">Web design</div>
                   </div>
-                  <div class="accordion__content">
+                  <div class="accordion__content" id="wedo_3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -375,16 +374,37 @@
       <div class="section section--gray">
         <div class="container">
           <div class="reviews">
-            <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-            <a class="reviews__btn reviews__btn--next" href="#">Next</a>
-            <div class="reviews__item">
-              <img class="reviews__photo" src="images\workslogo.png" alt="" />
-              <div class="reviews__text">
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation.”
+            <div data-slider>
+              <div>
+                <div class="reviews__item">
+                  <img
+                    class="reviews__photo"
+                    src="images\workslogo.png"
+                    alt=""
+                  />
+                  <div class="reviews__text">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="reviews__author">Jon Doe</div>
+                </div>
               </div>
-              <div class="reviews__author">Jon Doe</div>
+              <div>
+                <div class="reviews__item">
+                  <img
+                    class="reviews__photo"
+                    src="images\workslogo.png"
+                    alt=""
+                  />
+                  <div class="reviews__text">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                  </div>
+                  <div class="reviews__author">Jon Doe</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -604,16 +624,39 @@
         <div class="section">
           <div class="container">
             <div class="reviews">
-              <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
-              <a class="reviews__btn reviews__btn--next" href="#">Next</a>
-              <div class="reviews__item">
-                <img class="reviews__photo" src="images\workslogo.png" alt="" />
-                <div class="reviews__text">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation.”
+              <div data-slider>
+                <div>
+                  <div class="reviews__item">
+                    <img
+                      class="reviews__photo"
+                      src="images\workslogo.png"
+                      alt=""
+                    />
+                    <div class="reviews__text">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud
+                      exercitation.”
+                    </div>
+                    <div class="reviews__author">Joshua Earle</div>
+                  </div>
                 </div>
-                <div class="reviews__author">Joshua Earle</div>
+                <div>
+                  <div class="reviews__item">
+                    <img
+                      class="reviews__photo"
+                      src="images\workslogo.png"
+                      alt=""
+                    />
+                    <div class="reviews__text">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud
+                      exercitation.”
+                    </div>
+                    <div class="reviews__author">Joshua Earle</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -928,5 +971,13 @@
       <!-- /#footer -->
     </div>
     <!-- /.page -->
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js\app.js"></script>
   </body>
 </html>
